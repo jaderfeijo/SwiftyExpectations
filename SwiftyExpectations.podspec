@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyExpectations'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftyExpectations.'
+  s.version          = '1.0.0'
+  s.summary          = 'A library which simplifies the Swift syntax around XCTExpectations'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SwiftyExpectations is a library which simplifies the syntax for using XCTExpectations when writing Unit Tests in Swift.
                        DESC
 
-  s.homepage         = 'https://github.com/Jader Feijo/SwiftyExpectations'
+  s.homepage         = 'https://github.com/jaderfeijo/SwiftyExpectations'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jader Feijo' => 'jader@gojimo.co.uk' }
   s.source           = { :git => 'https://github.com/Jader Feijo/SwiftyExpectations.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/jaderfeijo'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwiftyExpectations/Classes/**/*'
+	s.swift_version = '4.2'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'SwiftyExpectations' => ['SwiftyExpectations/Assets/*.png']

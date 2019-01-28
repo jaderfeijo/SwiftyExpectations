@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyExpectations (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyExpectations (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyExpectations:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyExpectations: df0143d938f9070128fa2baa63b44ad45f4f27b7
+
+PODFILE CHECKSUM: e0e724cda412bdf74f0d53bb649485d2637a4135
+
+COCOAPODS: 1.5.3
