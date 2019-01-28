@@ -6,7 +6,7 @@
 
 import Foundation
 
-extension Double {
+public extension Double {
 
   /// A `TimeInterval` representing a single millisecond,
   /// multiplied by the value of `self`.
@@ -18,7 +18,7 @@ extension Double {
   ///
   /// ## See Also:
   /// `Double.millisecond`
-  var milliseconds: TimeInterval {
+  public var milliseconds: TimeInterval {
     return TimeInterval(self / 1000.0)
   }
 
@@ -36,7 +36,7 @@ extension Double {
   ///
   /// ## See Also:
   /// `Double.milliseconds`
-  var millisecond: TimeInterval {
+  public var millisecond: TimeInterval {
     return TimeInterval(self / 1000.0)
   }
 
@@ -50,7 +50,7 @@ extension Double {
   ///
   /// ## See Also:
   /// `Double.second`
-  var seconds: TimeInterval {
+  public var seconds: TimeInterval {
     return TimeInterval(self)
   }
 
@@ -68,7 +68,7 @@ extension Double {
   ///
   /// ## See Also:
   /// `Double.seconds`
-  var second: TimeInterval {
+  public var second: TimeInterval {
     return TimeInterval(self)
   }
 }

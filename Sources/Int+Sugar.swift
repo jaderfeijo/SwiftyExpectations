@@ -6,7 +6,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
 
   /// A `TimeInterval` representing a single millisecond,
   /// multiplied by the value of `self`.
@@ -18,7 +18,7 @@ extension Int {
   ///
   /// ## See Also:
   /// `Int.millisecond`
-  var milliseconds: TimeInterval {
+  public var milliseconds: TimeInterval {
     return TimeInterval(Double(self) / 1000.0)
   }
 
@@ -36,7 +36,7 @@ extension Int {
   ///
   /// ## See Also:
   /// `Int.milliseconds`
-  var millisecond: TimeInterval {
+  public var millisecond: TimeInterval {
     return TimeInterval(Double(self) / 1000.0)
   }
 
@@ -50,7 +50,7 @@ extension Int {
   ///
   /// ## See Also:
   /// `Int.second`
-  var seconds: TimeInterval {
+  public var seconds: TimeInterval {
     return TimeInterval(self)
   }
 
@@ -68,7 +68,7 @@ extension Int {
   ///
   /// ## See Also:
   /// `Int.seconds`
-  var second: TimeInterval {
+  public var second: TimeInterval {
     return TimeInterval(self)
   }
 
@@ -96,7 +96,7 @@ extension Int {
   ///
   /// ## See Also:
   /// `Int.time`
-  var times: Int {
+  public var times: Int {
     return self
   }
 
@@ -128,7 +128,7 @@ extension Int {
   ///
   /// ## See Also:
   /// `Int.times`
-  var time: Int {
+  public var time: Int {
     return self
   }
 }

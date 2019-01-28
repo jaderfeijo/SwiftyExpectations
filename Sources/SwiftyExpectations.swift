@@ -9,11 +9,11 @@ import XCTest
 /// a nicer, more 'swifty' syntax with which to deal
 /// with expectation in tests which are written in
 /// Swift.
-class Expectation {
+public class Expectation {
 
 	/// The underlying `XCTestExpectation` instance managed by
 	/// this `Expectation`.
-	let expectation: XCTestExpectation
+	public let expectation: XCTestExpectation
 
 	/// Whether or not this expectation has been fulfilled.
 	/// `true` when fulfilled, `false` otherwise
@@ -26,13 +26,13 @@ class Expectation {
 
 	/// Initialises a new instance of `Expectation` which
 	/// wraps the specified `XCTestExpectation` instance.
-	init(_ expectation: XCTestExpectation) {
+	public init(_ expectation: XCTestExpectation) {
 		self.expectation = expectation
 	}
 
 	/// Fulfills the wrapped `XCTExpectation` instance and sets
 	/// `isFulfilled` to `true`.
-	func fulfill() {
+	public func fulfill() {
 		expectation.fulfill()
 		fulfillmentCount += 1
 		if fulfillmentCount >= expectation.expectedFulfillmentCount {
@@ -58,7 +58,7 @@ class Expectation {
 	/// }
 	/// ```
 	/// - Parameter function: The closure to execute which fulfills the expectation.
-	func `do`(closure: ExpectationClosure) {
+	public func `do`(closure: ExpectationClosure) {
 		let finishClosure: ExpectationFinishClosure = { innerClosure in
 			innerClosure()
 			self.expectation.fulfill()
@@ -87,7 +87,7 @@ class Expectation {
 	/// }
 	/// ```
 	/// - Parameter function: The function to execute which fulfills the expectation.
-	func `do`<T>(function: ExpectationFunctionClosure<T>) {
+	public func `do`<T>(function: ExpectationFunctionClosure<T>) {
 		let finishFunction: ExpectationFinishFunction<T> = { innerFunction -> T in
 			defer {
 				self.expectation.fulfill()
@@ -98,22 +98,22 @@ class Expectation {
 	}
 
 	/// Syntactic sugar, essentially the same as `do`.
-	func to(closure: ExpectationClosure) {
+	public func to(closure: ExpectationClosure) {
 		self.do(closure: closure)
 	}
 
 	/// Syntactic sugar, essentially the same as `do`.
-	func to<T>(function: ExpectationFunctionClosure<T>) {
+	public func to<T>(function: ExpectationFunctionClosure<T>) {
 		self.do(function: function)
 	}
 }
 
 // MARK: - XCTestCase: Swifty Expectations Methods -
 
-extension XCTestCase {
+public extension XCTestCase {
 
 	/// A simple closure type with no parameters and no return value.
-	typealias VoidClosure = () -> Void
+	public typealias VoidClosure = () -> Void
 
 	/// Returns a new instance of `Expectation` with a wrapped
 	///  instance of `XCTExpectation` containing the specified
@@ -125,7 +125,7 @@ extension XCTestCase {
 	/// - Parameter description: The expectation's description.
 	///
 	/// - Returns: The new `Expectation` instance.
-	func expect(_ description: String) -> Expectation {
+	public func expect(_ description: String) -> Expectation {
 		return Expectation(
 			expectation(
 				description: description
@@ -149,7 +149,7 @@ extension XCTestCase {
 	/// on the new `Expectation` before it fails.
 	///
 	/// - Returns: The new `Expectation` instance.
-	func expect(_ description: String, count: UInt) -> Expectation {
+	public func expect(_ description: String, count: UInt) -> Expectation {
 		let e = expectation(description: description)
 		e.assertForOverFulfill = true
 		e.expectedFulfillmentCount = Int(count)
@@ -178,7 +178,7 @@ extension XCTestCase {
 	/// on the new `Expectation` before it fails.
 	///
 	/// - Returns: The new `Expectation` instance.
-	func expect(_ description: String, count: Int) -> Expectation {
+	public func expect(_ description: String, count: Int) -> Expectation {
 		return expect(description, count: UInt(count))
 	}
 
@@ -191,7 +191,7 @@ extension XCTestCase {
 	///
 	/// - Parameter description: The expectation's description.
 	/// - Returns: The new `Expectation` instance.
-	func dontExpect(_ description: String) -> Expectation {
+	public func dontExpect(_ description: String) -> Expectation {
 		let e = expectation(
 			description: description
 		)
@@ -203,36 +203,36 @@ extension XCTestCase {
 
 // MARK: - TimeInterval: Default Intervals -
 
-extension TimeInterval {
+public extension TimeInterval {
 	/// A tiny time interval of 1 millisecond.
-	static let tiny = 1.millisecond
+	public static let tiny = 1.millisecond
 
 	/// A small time interval of 500 milliseconds
-	static let small = 500.milliseconds
+	public static let small = 500.milliseconds
 
 	/// A default time interval of 1 second.
-	static let `default` = 1.second
+	public static let `default` = 1.second
 
 	/// A default timeout of 1 second.
-	static let timeout = 1.second
+	public static let timeout = 1.second
 }
 
 // MARK: - Closures -
 
 /// A closure used as the inner closure type for an `ExpectationFinishClosure`.
-typealias InnerExpectationClosure = () -> Void
+public typealias InnerExpectationClosure = () -> Void
 
 /// A closure which passes an `InnerExpectationClosure` to its receiver.
-typealias ExpectationFinishClosure = (InnerExpectationClosure) -> Void
+public typealias ExpectationFinishClosure = (InnerExpectationClosure) -> Void
 
 /// A closure which passes an escaping `ExpectationFinishClosure` to its receiver.
-typealias ExpectationClosure = (@escaping ExpectationFinishClosure) -> Void
+public typealias ExpectationClosure = (@escaping ExpectationFinishClosure) -> Void
 
 /// A function used as the inner closure type for an `ExpectationFinishFunction` which returns `T`.
-typealias InnerExpectationFunction<T> = () -> T
+public typealias InnerExpectationFunction<T> = () -> T
 
 /// A function which passes an `InnerExceptionFunction<T>` to its receiver and returns `T`.
-typealias ExpectationFinishFunction<T> = (InnerExpectationFunction<T>) -> T
+public typealias ExpectationFinishFunction<T> = (InnerExpectationFunction<T>) -> T
 
 /// A closure which passes an escaping `ExpectationFinishFunction<T>` to its receiver and returns Void.
-typealias ExpectationFunctionClosure<T> = (@escaping ExpectationFinishFunction<T>) -> Void
+public typealias ExpectationFunctionClosure<T> = (@escaping ExpectationFinishFunction<T>) -> Void

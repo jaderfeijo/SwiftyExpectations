@@ -13,7 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* SwiftyExpectationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SwiftyExpectationTests.swift */; };
 		90B7562F480A2FF8EE632BFF /* Pods_SwiftyExpectations_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF55D07E289D22D094082AF1 /* Pods_SwiftyExpectations_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		02C9D7A87F043F45C111D2D3 /* Pods-SwiftyExpectations_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyExpectations_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyExpectations_Tests/Pods-SwiftyExpectations_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		07C1828E2E6B7A0C50901888 /* Pods_SwiftyExpectations_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyExpectations_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F341916CBBA34BED896388A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3F341916CBBA34BED896388A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		401E83AFCC5738CAD2AFACC0 /* Pods-SwiftyExpectations_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyExpectations_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyExpectations_Example/Pods-SwiftyExpectations_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftyExpectations_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyExpectations_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,11 +41,11 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwiftyExpectations_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyExpectations_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* SwiftyExpectationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyExpectationTests.swift; sourceTree = "<group>"; };
 		8F8DB24BA666E08AC056329A /* Pods-SwiftyExpectations_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyExpectations_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyExpectations_Example/Pods-SwiftyExpectations_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BB729D456BC815464174AB06 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BB729D456BC815464174AB06 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DF55D07E289D22D094082AF1 /* Pods_SwiftyExpectations_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyExpectations_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F130A02B5963A4B54093FA5B /* SwiftyExpectations.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftyExpectations.podspec; path = ../SwiftyExpectations.podspec; sourceTree = "<group>"; };
+		F130A02B5963A4B54093FA5B /* SwiftyExpectations.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyExpectations.podspec; path = ../SwiftyExpectations.podspec; sourceTree = "<group>"; };
 		F1E221741DE4AA44BB31BF50 /* Pods-SwiftyExpectations_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyExpectations_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyExpectations_Tests/Pods-SwiftyExpectations_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,9 @@
 				B94F566A830971B32DF21893 /* Pods */,
 				8B5A6C79D6E4AFECA589DCDD /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
@@ -115,7 +117,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* SwiftyExpectationTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -343,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* SwiftyExpectationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
