@@ -1,7 +1,5 @@
 //
-//  Int+Sugar.swift
-//
-//  Created by Jader Feijo.
+//  SwiftyExpectations
 //
 
 import Foundation
