@@ -45,7 +45,7 @@
 		8F8DB24BA666E08AC056329A /* Pods-SwiftyExpectations_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyExpectations_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyExpectations_Example/Pods-SwiftyExpectations_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BB729D456BC815464174AB06 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DF55D07E289D22D094082AF1 /* Pods_SwiftyExpectations_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyExpectations_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F130A02B5963A4B54093FA5B /* SwiftyExpectations.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyExpectations.podspec; path = ../SwiftyExpectations.podspec; sourceTree = "<group>"; };
+		F130A02B5963A4B54093FA5B /* SwiftyExpectations.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyExpectations.podspec; path = ../SwiftyExpectations.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F1E221741DE4AA44BB31BF50 /* Pods-SwiftyExpectations_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyExpectations_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyExpectations_Tests/Pods-SwiftyExpectations_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
