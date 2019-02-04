@@ -117,4 +117,28 @@ public extension XCTestCase {
 	public func wait(for expectation: Expectation, timeout: TimeInterval = .default) {
 		wait(for: [expectation.expectation], timeout: timeout)
 	}
+
+	/// Waits for the specified `Expectation`s, for the specified `timeout`.
+	///
+	/// This method acts as a wrapper around the
+	/// `wait(for: [XCTExpectation], timeout: TimeInterval)` method, allowing
+	/// for a simpler syntax to be used whenever multiple expectations are to be
+	/// awaited on.
+	///
+	/// Example:
+	/// ```
+	/// wait(for: completed, finished)
+	/// ```
+	///
+	/// Or:
+	/// ```
+	/// wait(for: completed, finished, timeout: 5.seconds)
+	/// ```
+	///
+	/// - Parameters:
+	///   - expectation: The `Expectation` to be waited on.
+	///   - timeout: The timeout after which the expectation fails.
+	public func wait(for expectations: Expectation..., timeout: TimeInterval = .default) {
+		wait(for: expectations.map { $0.expectation }, timeout: timeout)
+	}
 }
