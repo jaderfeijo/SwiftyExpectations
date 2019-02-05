@@ -35,12 +35,14 @@ public class Expectation {
 
 	/// Whether or not this expectation has been fulfilled.
 	/// `true` when fulfilled, `false` otherwise
-	private(set) var isFulfilled = false
+	private(set)
+	public var isFulfilled = false
 
 	/// The current fulfillment count for this expectation.
 	/// This value gets incremented every time `fulfill()`
 	/// is called.
-	private(set) var fulfillmentCount: Int = 0
+	private(set)
+	public var fulfillmentCount: Int = 0
 
 	/// Initialises a new instance of `Expectation` which
 	/// wraps the specified `XCTestExpectation` instance.
