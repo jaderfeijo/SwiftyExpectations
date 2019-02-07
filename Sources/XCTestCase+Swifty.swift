@@ -141,4 +141,21 @@ public extension XCTestCase {
 	public func wait(for expectations: Expectation..., timeout: TimeInterval = .default) {
 		wait(for: expectations.map { $0.expectation }, timeout: timeout)
 	}
+
+
+	/// Waits for all pending expectations until the `default` timeout
+	/// is reached.
+	///
+	/// This method acts as a wrapper around `waitForExpectations(timeout: TimeInterval, handler: XCWaitCompletionHandler?)`.
+	/// Using this method is equivalent to writing:
+	///
+	/// ```
+	/// waitForExpectations(timeout: .default)
+	/// ```
+	///
+	/// - Parameter handler: An optional XCWaitCompletionHandler block to invoke when all expectations have been fulfilled
+	///                      or when the wait timeout is triggered. (Timeout is always treated as a test failure.)
+	public func waitForExpectations(handler: XCWaitCompletionHandler? = nil) {
+		waitForExpectations(timeout: .default, handler: handler)
+	}
 }
