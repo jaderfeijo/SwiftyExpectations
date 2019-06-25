@@ -16,7 +16,7 @@ public extension Int {
   ///
   /// ## See Also:
   /// `Int.millisecond`
-  public var milliseconds: TimeInterval {
+  var milliseconds: TimeInterval {
     return TimeInterval(Double(self) / 1000.0)
   }
 
@@ -34,7 +34,7 @@ public extension Int {
   ///
   /// ## See Also:
   /// `Int.milliseconds`
-  public var millisecond: TimeInterval {
+  var millisecond: TimeInterval {
     return TimeInterval(Double(self) / 1000.0)
   }
 
@@ -48,7 +48,7 @@ public extension Int {
   ///
   /// ## See Also:
   /// `Int.second`
-  public var seconds: TimeInterval {
+  var seconds: TimeInterval {
     return TimeInterval(self)
   }
 
@@ -66,7 +66,7 @@ public extension Int {
   ///
   /// ## See Also:
   /// `Int.seconds`
-  public var second: TimeInterval {
+  var second: TimeInterval {
     return TimeInterval(self)
   }
 
@@ -94,7 +94,7 @@ public extension Int {
   ///
   /// ## See Also:
   /// `Int.time`
-  public var times: Int {
+  var times: Int {
     return self
   }
 
@@ -126,7 +126,7 @@ public extension Int {
   ///
   /// ## See Also:
   /// `Int.times`
-  public var time: Int {
+  var time: Int {
     return self
   }
 }

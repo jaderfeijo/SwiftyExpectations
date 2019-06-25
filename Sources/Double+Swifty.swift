@@ -16,7 +16,7 @@ public extension Double {
   ///
   /// ## See Also:
   /// `Double.millisecond`
-  public var milliseconds: TimeInterval {
+  var milliseconds: TimeInterval {
     return TimeInterval(self / 1000.0)
   }
 
@@ -34,7 +34,7 @@ public extension Double {
   ///
   /// ## See Also:
   /// `Double.milliseconds`
-  public var millisecond: TimeInterval {
+  var millisecond: TimeInterval {
     return TimeInterval(self / 1000.0)
   }
 
@@ -48,7 +48,7 @@ public extension Double {
   ///
   /// ## See Also:
   /// `Double.second`
-  public var seconds: TimeInterval {
+  var seconds: TimeInterval {
     return TimeInterval(self)
   }
 
@@ -66,7 +66,7 @@ public extension Double {
   ///
   /// ## See Also:
   /// `Double.seconds`
-  public var second: TimeInterval {
+  var second: TimeInterval {
     return TimeInterval(self)
   }
 }

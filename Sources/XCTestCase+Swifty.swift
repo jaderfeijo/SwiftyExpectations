@@ -8,7 +8,7 @@ import XCTest
 public extension XCTestCase {
 
 	/// A simple closure type with no parameters and no return value.
-	public typealias VoidClosure = () -> Void
+	typealias VoidClosure = () -> Void
 
 	/// Returns a new instance of `Expectation` with a wrapped
 	///  instance of `XCTExpectation` containing the specified
@@ -20,7 +20,7 @@ public extension XCTestCase {
 	/// - Parameter description: The expectation's description.
 	///
 	/// - Returns: The new `Expectation` instance.
-	public func expect(_ description: String) -> Expectation {
+	func expect(_ description: String) -> Expectation {
 		return Expectation(
 			expectation(
 				description: description
@@ -44,7 +44,7 @@ public extension XCTestCase {
 	/// on the new `Expectation` before it fails.
 	///
 	/// - Returns: The new `Expectation` instance.
-	public func expect(_ description: String, count: UInt) -> Expectation {
+	func expect(_ description: String, count: UInt) -> Expectation {
 		let e = expectation(description: description)
 		e.assertForOverFulfill = true
 		e.expectedFulfillmentCount = Int(count)
@@ -73,7 +73,7 @@ public extension XCTestCase {
 	/// on the new `Expectation` before it fails.
 	///
 	/// - Returns: The new `Expectation` instance.
-	public func expect(_ description: String, count: Int) -> Expectation {
+	func expect(_ description: String, count: Int) -> Expectation {
 		return expect(description, count: UInt(count))
 	}
 
@@ -86,7 +86,7 @@ public extension XCTestCase {
 	///
 	/// - Parameter description: The expectation's description.
 	/// - Returns: The new `Expectation` instance.
-	public func dontExpect(_ description: String) -> Expectation {
+	func dontExpect(_ description: String) -> Expectation {
 		let e = expectation(
 			description: description
 		)
@@ -114,7 +114,7 @@ public extension XCTestCase {
 	/// - Parameters:
 	///   - expectation: The `Expectation` to be waited on.
 	///   - timeout: The timeout after which the expectation fails.
-	public func wait(for expectation: Expectation, timeout: TimeInterval = .default) {
+	func wait(for expectation: Expectation, timeout: TimeInterval = .default) {
 		wait(for: [expectation.expectation], timeout: timeout)
 	}
 
@@ -138,7 +138,7 @@ public extension XCTestCase {
 	/// - Parameters:
 	///   - expectation: The `Expectation` to be waited on.
 	///   - timeout: The timeout after which the expectation fails.
-	public func wait(for expectations: Expectation..., timeout: TimeInterval = .default) {
+	func wait(for expectations: Expectation..., timeout: TimeInterval = .default) {
 		wait(for: expectations.map { $0.expectation }, timeout: timeout)
 	}
 
@@ -155,7 +155,7 @@ public extension XCTestCase {
 	///
 	/// - Parameter handler: An optional XCWaitCompletionHandler block to invoke when all expectations have been fulfilled
 	///                      or when the wait timeout is triggered. (Timeout is always treated as a test failure.)
-	public func waitForExpectations(handler: XCWaitCompletionHandler? = nil) {
+	func waitForExpectations(handler: XCWaitCompletionHandler? = nil) {
 		waitForExpectations(timeout: .default, handler: handler)
 	}
 }
