@@ -1,6 +1,5 @@
 # SwiftyExpectations
 
-[![CI Status](https://img.shields.io/travis/jaderfeijo/SwiftyExpectations.svg?style=flat)](https://travis-ci.org/jaderfeijo/SwiftyExpectations)
 [![SPM Compatible](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/jaderfeijo/SwiftyExpectations/blob/master/LICENSE)
 
@@ -25,7 +24,7 @@ import PackageDescription
 let package = Package(
 	 name: "YOUR_PROJECT_NAME",
 	 dependencies: [
-		  .package(url: "https://github.com/jaderfeijo/SwiftyExpectations.git", from: "YOUR_TARGET_VERSION")
+		  .package(url: "https://github.com/jaderfeijo/SwiftyExpectations.git", from: "1.0.0")
 	 ],
 	 targets: [
 		  .target(
