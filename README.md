@@ -1,28 +1,40 @@
 # SwiftyExpectations
 
-[![CI Status](https://img.shields.io/travis/jaderfeijo/SwiftyExpectations.svg?style=flat)](https://travis-ci.org/jaderfeijo/SwiftyExpectations)
-[![Version](https://img.shields.io/cocoapods/v/SwiftyExpectations.svg?style=flat)](https://cocoapods.org/pods/SwiftyExpectations)
-[![License](https://img.shields.io/cocoapods/l/SwiftyExpectations.svg?style=flat)](https://cocoapods.org/pods/SwiftyExpectations)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftyExpectations.svg?style=flat)](https://cocoapods.org/pods/SwiftyExpectations)
+[![SPM Compatible](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/jaderfeijo/SwiftyExpectations/blob/master/LICENSE)
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo. If using Swift Package Manager, open the project in Xcode and resolve the package dependencies.
 
 ## Requirements
 
-* Ruby Gems
-* Bundler
-* Xcode 10 or above
+* Swift 5.0 or later
+* Xcode 11 or later
 
 ## Installation
 
-SwiftyExpectations is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager
 
-```ruby
-pod 'SwiftyExpectations'
+You can use [The Swift Package Manager](https://swift.org/package-manager/) to install `SwiftyExpectations` by adding the proper description to your `Package.swift` file:
+
+```swift
+import PackageDescription
+
+let package = Package(
+	 name: "YOUR_PROJECT_NAME",
+	 dependencies: [
+		  .package(url: "https://github.com/jaderfeijo/SwiftyExpectations.git", from: "1.0.0")
+	 ],
+	 targets: [
+		  .target(
+				name: "YOUR_TARGET_NAME",
+				dependencies: ["SwiftyExpectations"]),
+	 ]
+)
 ```
+
+Then, run swift build whenever you get ready.
 
 ## Author
 
